@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Fragment List and Detail View</string>
+
+    <string-array name="list">
+        <item>James</item>
+        <item>Josephine</item>
+        <item>Art</item>
+        <item>Lenna</item>
+    </string-array>
+
+    <string-array name="description">
+        <item>Address \n 6649 N Blue Gum St \n\n Email \n jbutt@gmail.com \n\n Web \n http://www.bentonjohnbjr.com</item>
+        <item>Address \n Chanay, Jeffrey A Esq \n\n Email \n josephine_darakjy@darakjy.org \n\n Web \n http://www.chanayjeffreyaesq.com</item>
+        <item>Address \n Chemel, James L Cpa \n\n Email \n art@venere.org \n\n Web \n http://www.chemeljameslcpa.com</item>
+        <item>Address \n Feltz Printing Service \n\n Email \n lpaprocki@hotmail.com \n\n Web \n http://www.feltzprintingservice.com</item>
+    </string-array>
+</resources>

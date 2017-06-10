@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="vertical"
+    android:weightSum="100"
+    android:background="#fb16ff"
+    tools:context="com.pinaksoftwares.modularfragments.MainActivity">
+
+
+    <fragment
+        android:layout_weight="50"
+        android:id="@+id/fragment"
+        android:name="com.pinaksoftwares.modularfragments.FragmentList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <fragment
+        android:layout_marginTop="10dp"
+        android:layout_weight="50"
+        android:id="@+id/fragment2"
+        android:name="com.pinaksoftwares.modularfragments.FragmentDetail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+</LinearLayout>
