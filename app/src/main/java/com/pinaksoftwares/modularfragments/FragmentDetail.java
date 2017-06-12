@@ -17,24 +17,19 @@ import java.util.Arrays;
 public class FragmentDetail extends Fragment {
 
     TextView tv_description;
-    int i;
-    String data;
+    int id;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_detail, container, false);
 
-        if(savedInstanceState == null){
-
-        }
-        else{
+        if(savedInstanceState != null){
             tv_description = (TextView) view.findViewById(R.id.tv_fragment_detail);
             Resources resources = getResources();
             String[] description = resources.getStringArray(R.array.description);
-            String m  = Arrays.toString(savedInstanceState.getStringArray("description"));
-            data = savedInstanceState.getString("description");
-            tv_description.setText(data);
+            id = savedInstanceState.getInt("id");
+            tv_description.setText(description[id]);
         }
         return view;
     }
@@ -48,15 +43,13 @@ public class FragmentDetail extends Fragment {
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        Resources resources = getResources();
-        String[] description = resources.getStringArray(R.array.description);
-        data= description[i];
-        outState.putString("description", data);
+        outState.putInt("id",id);
     }
 
     public void changeData(int i){
         Resources resources = getResources();
         String[] description = resources.getStringArray(R.array.description);
+        id = i;
         tv_description.setText(description[i]);
     }
 }
